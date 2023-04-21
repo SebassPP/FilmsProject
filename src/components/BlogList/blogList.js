@@ -22,6 +22,7 @@ const MovieList = () => {
         .then(data => setMovieList(data.results))
     }
 
+    console.log(movieList)
     return (
         <div className="movie__list">
             <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>

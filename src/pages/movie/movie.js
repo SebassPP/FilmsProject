@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import "./movie.css"
 import { useParams } from "react-router-dom"
-
+import FavoriteView from "../../components/favorites/FavoriteView"
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
@@ -62,6 +62,7 @@ const Movie = () => {
                 {
                     currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
+                <div><FavoriteView/></div>
                 {
                     currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
