@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Video de la explicacion: https://unisabanaedu.sharepoint.com/:v:/s/Honguitos846/ETHPB0uqFiFGrXFn-27ybu8BaWDBagSkGyi-zpN-1G0MqQ?e=jdJWVg
+Video de la explicacion: https://unisabanaedu.sharepoint.com/:v:/s/Honguitos846/ETHPB0uqFiFGrXFn-27ybu8BaWDBagSkGyi-zpN-1G0MqQ?e=jdJWVg \
 In the project directory, you can run:
 
 ### `npm start`
