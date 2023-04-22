@@ -58,15 +58,21 @@ const Movie = () => {
                 </div>
             </div>
             <div className="movie__links">
-                <div className="movie__heading">Links</div>
+               
                 {
                     currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
                 {
+                <button className="movie__favButton movie__Button">Add to favourites</button>
+                }
+                {
+                <button className="movie__watchButton movie__Button">Watch later</button>                   
+                }
+                {
                     currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
-            </div>
-            
+                
+            </div> 
         </div>
     )
 }
