@@ -20,7 +20,6 @@ const getFromFirebase = async (collectionName) => {
       querySnapshot.forEach((doc) => {
         data.push({ ...doc.data(), id: doc.id });
       });
-      //console.log("Documents read from collection " + collectionName + ": ", data);
       console.log(data)
       return data;
       
@@ -50,8 +49,6 @@ const getFromFirebase = async (collectionName) => {
       console.error("Error deleting document: ", e);
     }
   };
- 
- 
  
  
 export { addToFirebase, getFromFirebase, updateFromFirebase, deleteFromFirebase };

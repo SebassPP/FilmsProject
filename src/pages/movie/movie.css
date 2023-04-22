@@ -87,11 +87,17 @@
 }
 
 .movie__links {
-    position: relative;
-    bottom: 120px;
     display: flex;
-    justify-content: space-between;
-    width: 75%;
+    position: relative;
+    bottom: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem 1.8rem;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 80%;
+    color: black;
+    font-weight: bold;
 }
 
 .movie__heading {

@@ -28,30 +28,36 @@ const FavoriteView = () => {
 
     const getFavorite = async () => {
         getFromFirebase(
-    
           "Favorites"
         );
-       
       };
 
-    // 
-    console.log(currentMovieDetail)
-    console.log(getFavorite)
+   
+
+    const deleteToFB = async (id,type) => {
+        deleteFromFirebase(
+            id,type
+        );
+    };
+
+    
+
+   
     return (
-            <div>
+            <div className="movie__links">
                 {
-                    <button className="movie__favButton movie__Button"onClick={() => addToFB(id,id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
+                    <button className="movie__favButton movie__Button"onClick={() => addToFB(id,currentMovieDetail.id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
                         currentMovieDetail.release_date,currentMovieDetail.vote_average ,"Favorites" )}>Add to favorites</button>
                 }
                 {
-                    <button className="movie__favButton_delete movie__Button">Add to favorites</button>
+                    <button className="movie__favButton_delete movie__Button"onClick={() => deleteToFB(id,"Favorites" )}>Delete from  favorites</button>
                 }
                 {
-                    <button className="movie__watchButton movie__Button"onClick={() => addToFB(id,id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
-                        currentMovieDetail.release_date, currentMovieDetail.vote_average ,"WatchLater" )}>Watch later</button>
+                    <button className="movie__watchButton movie__Button"onClick={() => addToFB(id,currentMovieDetail.id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
+                        currentMovieDetail.release_date, currentMovieDetail.vote_average ,"WatchLater" )}>Add to Watch later</button>
                 }
                 {
-                     <button className="movie__watchButton_delete movie__Button">Watch later</button>
+                     <button className="movie__watchButton_delete movie__Button"onClick={() => deleteToFB(id,"Favorites" )}>Delete from Watch later</button>
                 }                  
             </div>
 

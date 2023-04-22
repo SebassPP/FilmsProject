@@ -8,7 +8,6 @@ const FavoriteList = () => {
     const [FavList, setFavorites] = useState([])
     
     
-
     const getFavorite = async () => {
         getFromFirebase(
           "Favorites"
