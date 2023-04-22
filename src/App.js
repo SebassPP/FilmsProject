@@ -5,6 +5,7 @@ import Home from './pages/home/home';
 import MovieList from './components/BlogList/blogList';
 import Movie from './pages/movie/movie';
 import FavoriteList from './components/FavoriteList/FavoriteList';
+import WatchLaterList from './components/WatchLaterList/WatchLaterList';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="movie/:id" element={<Movie/>}></Route>
           <Route path="movies/:type" element={<MovieList/>}></Route>
           <Route path="movies/favorites" element={<FavoriteList/>}></Route>
+          <Route path="movies/watch_later" element={<WatchLaterList/>}></Route>
           <Route path="/*" element={<h1>Error page</h1>}></Route>
         </Routes>
       </Router>

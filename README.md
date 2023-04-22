@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Films Blog
+# Juanita Sarmiento - Juan Sebastian Pardo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

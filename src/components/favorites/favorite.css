@@ -1,0 +1,16 @@
+
+.movie__favButton{
+    background-color: aquamarine;
+}
+
+.movie__watchButton{
+    background-color: rgb(66, 244, 110);
+}
+
+.movie__favButton_delete{
+    background-color: rgb(177, 25, 25);
+}
+
+.movie__watchButton_delete{
+    background-color: rgb(255, 0, 0);
+}

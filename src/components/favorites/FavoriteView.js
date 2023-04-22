@@ -20,9 +20,9 @@ const FavoriteView = () => {
         .then(data => setMovie(data))
     }
 
-    const addToFB = async (id,id_pelicula, original_title, type) => {
+    const addToFB = async (id,id_pelicula, original_title, poster_path, release_date,vote_average, type) => {
         addToFirebase(
-            { objectToSave: { id, id_pelicula, original_title } },type
+            { objectToSave: { id, id_pelicula, original_title, poster_path,release_date,vote_average } },type
         );
     };
 
@@ -39,15 +39,23 @@ const FavoriteView = () => {
     console.log(getFavorite)
     return (
             <div>
-                <button className='button-81'  onClick={() => addToFB(id,id,currentMovieDetail.original_title,"Favorites" )}>Add to Favorites</button>
-                <button className='button-82'  onClick={() => addToFB(id,id,currentMovieDetail.original_title,"WatchLater" )}>Add to Watch Later</button>
+                {
+                    <button className="movie__favButton movie__Button"onClick={() => addToFB(id,id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
+                        currentMovieDetail.release_date,currentMovieDetail.vote_average ,"Favorites" )}>Add to favorites</button>
+                }
+                {
+                    <button className="movie__favButton_delete movie__Button">Add to favorites</button>
+                }
+                {
+                    <button className="movie__watchButton movie__Button"onClick={() => addToFB(id,id,currentMovieDetail.original_title,currentMovieDetail.poster_path,
+                        currentMovieDetail.release_date, currentMovieDetail.vote_average ,"WatchLater" )}>Watch later</button>
+                }
+                {
+                     <button className="movie__watchButton_delete movie__Button">Watch later</button>
+                }                  
             </div>
 
     )
-
-
-
-
 
 
 };

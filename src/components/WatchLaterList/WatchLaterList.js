@@ -1,34 +1,27 @@
 import React, {useEffect, useState} from "react"
-import "./FavoriteList.css"
+import "./WatchLaterList.css"
 import Cards from "../cardFB/cardFB"
 import {getFromFirebase} from "../firebaseHelpers "
 
-const FavoriteList = () => {
+const WatchLaterList = () => {
 
-    const [FavList, setFavorites] = useState([])
-    
-    
-
+    const [WList, setWatchLater] = useState([])
     const getFavorite = async () => {
         getFromFirebase(
-          "Favorites"
-        ).then((data) => setFavorites(data));
-        }
-        
-      ;
+          "WatchLater"
+        ).then((data) => setWatchLater(data));
+        };
 
       useEffect(() => {
         getFavorite();
     }, [])
 
-    console.log(FavList)
-
     return (
-        <div className="favorite__list">
-            <h2 className="list__title">{("FAVORITES").toUpperCase()}</h2>
+        <div className="watchLater__list">
+            <h2 className="list__title">{("Watch Later").toUpperCase()}</h2>
             <div className="list__cards">
                 {
-                    FavList.map(movie => (
+                    WList.map(movie => (
                         <Cards movie={movie} />))
                 }
             </div>
@@ -36,4 +29,4 @@ const FavoriteList = () => {
     )
 }
 
-export default FavoriteList
+export default WatchLaterList
