@@ -1,11 +1,9 @@
 # Films Blog
 # Juanita Sarmiento - Juan Sebastian Pardo
-
+Video de la explicacion: https://unisabanaedu.sharepoint.com/:v:/s/Honguitos846/ETHPB0uqFiFGrXFn-27ybu8BaWDBagSkGyi-zpN-1G0MqQ?e=jdJWVg \
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-Video de la explicacion: https://unisabanaedu.sharepoint.com/:v:/s/Honguitos846/ETHPB0uqFiFGrXFn-27ybu8BaWDBagSkGyi-zpN-1G0MqQ?e=jdJWVg \
 In the project directory, you can run:
 
 ### `npm start`
